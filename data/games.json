@@ -1,0 +1,148 @@
+{
+  "games": [
+    {
+      "id": 12,
+      "game_name": "Resident Evil Requiem",
+      "release_date": "2026-02-26T19:04:21+00:00",
+      "genre": "Action-Survival",
+      "game_image": "https://upload.wikimedia.org/wikipedia/en/1/15/Resident_Evil_Requiem_Cover_Art.jpg",
+      "youtube_video": "https://youtu.be/ktWzJLHZRfw?si=aTzMOci0OmI4ew5s",
+      "video_description": "The Complete Story of Resident Evil 9 Requiem",
+      "ratings": [
+        {
+          "id": 23,
+          "rating_text": "HAYUL - As a Resident Evil fan, this felt like the ultimate reward. Playing the 9th entry felt like experiencing everything from Resident Evil 1 through 8 all at once. I had an insane amount of fun",
+          "likes": 66,
+          "dislikes": 4
+        },
+        {
+          "id": 24,
+          "rating_text": "It's good to be back in the RE universe.\r\n\r\nBig RE fan. I absolutely loved this game. Great one to dive in if new to the franchise (go play RE2 remake for a nice 'prequel'). It's right up there with RE2 as my all time favorite RE games. People and moments from the past 8 games all in 1. Playing as Leon you feel like a powerhouse while as Grace you have to play it safe. Really enjoyed both sides of gameplay a tons. I felt the pacing was amazing from start to end. The beginning is one of the coolest out of any action horror I've played too. I mean, when do you get a game that lets you parry everything from missiles, massive monster lunges, and cars.\r\n\r\nFixing to do a 2nd run to get no heals + 4 hours beat achievements and then going to try out an Insane run. Wish me luck!",
+          "likes": 178,
+          "dislikes": 12
+        },
+        {
+          "id": 25,
+          "rating_text": "Swii - I didnt think anything would top Resi 2 for me but here we are. I so badly wanted Capcom to go back to the old stories after 7/8, and they delivered. This game feels like 1 with the mansion, 2 with locations and characters, pays homage to 0, enemies from 1/2/3- Its 100% a love letter to all those early games and I adore it so much, several times I left my chair from pure excitement. Thank you Capcom for genuinely making the best RE",
+          "likes": 34,
+          "dislikes": 5
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "game_name": "SILENT HILL f",
+      "release_date": "2025-09-24T17:30:25+00:00",
+      "genre": "Survival Horror",
+      "game_image": "https://cdn1.epicgames.com/spt-assets/6d34282a26c544df88ccc57505cdd2f0/silent-hill-f-1q1eg.jpg",
+      "youtube_video": "https://youtu.be/EyragNyhKeo?si=ZSiwBCeWfn9_OdFW",
+      "video_description": "Entire playthrough for SILENT HILL f.",
+      "ratings": [
+        {
+          "id": 13,
+          "rating_text": "Hex: PWY - \r\nRecommended\r\n\r\nIt\u2019s an engaging game with a terrifying atmosphere that draws players in from the start.\r\n\r\nThe unique enemy designs and superb music heighten the tension.\r\nIts simple yet effective combat allows players to focus on the immersive experience.\r\n\r\nThe story starts off confusing but becomes clearer over time, enhancing the gameplay.\r\n\r\nOverall, it\u2019s a highly enjoyable game worth experiencing at least once.",
+          "likes": 67,
+          "dislikes": 8
+        },
+        {
+          "id": 14,
+          "rating_text": "kark - Amazing game! Don't recommend playing with lost in the fog difficulty on puzzles on your first playthrough unless you hate yourself.",
+          "likes": 45,
+          "dislikes": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "game_name": "Mouthwashing",
+      "release_date": "2024-09-26T16:30:25+00:00",
+      "genre": "Psychological Horror",
+      "game_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2475490/header.jpg",
+      "youtube_video": "https://youtu.be/eLaHVFjekTw?si=vDLAkpiYliE1TtY0",
+      "video_description": "The Hidden Monster of Mouthwashing",
+      "ratings": [
+        {
+          "id": 15,
+          "rating_text": "A grim but fantastic little Sci - Fi story with surreal tones and a lovable (Not you, Jimmy) cast to match. It's designed to keep you tense but not bombard you with jumpscares; the topics the game presents can be a *LITTLE* disturbing but if you're kinda into an unsettling story THIS is for you.",
+          "likes": 568,
+          "dislikes": 78
+        },
+        {
+          "id": 16,
+          "rating_text": "Symka - Incredible game, honestly. It's short, but you can clearly see that there was tons of thought and work put into it. I don't want to say too much and give away the ending, but you basically watch a crew of 5 people get stuck in space after a crash, and start to deteriorate mentally. Expertly woven psychological horror, 10/10.",
+          "likes": 125,
+          "dislikes": 34
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "game_name": "Amnesia: The Bunker",
+      "release_date": "2023-06-06T16:30:25+00:00",
+      "genre": "Survival Horror",
+      "game_image": "https://store-images.s-microsoft.com/image/apps.11905.14112953128044526.ba95d4f9-17d4-4076-a135-073ccafc4d57.99774603-a61d-41bd-a87d-75435610d053",
+      "youtube_video": "https://youtu.be/Au7SlnIrh6M?si=pEI9pm4diLzJsuJX",
+      "video_description": "Amnesia: The Bunker is a Masterclass in Horror Game Design",
+      "ratings": [
+        {
+          "id": 17,
+          "rating_text": "wei - Fantastic game and a great example of an actual modern horror game. We need more developers who aren't afraid of frustrating players. Horror is supposed to be stressful and this game delivers exactly that through the claustrophobic setting, the limited resources used to explore and progress, the monster that actively roams the map whenever the light goes off and the generator that runs on limited fuel and is necessary to keep the lights on. Amnesia: The Bunker is not for everyone, and that's exactly what makes it so good.",
+          "likes": 456,
+          "dislikes": 23
+        },
+        {
+          "id": 18,
+          "rating_text": "Sound design alone makes this terrifying.",
+          "likes": 56,
+          "dislikes": 8
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "game_name": "Dead Space",
+      "release_date": "2023-01-27T17:30:25+00:00",
+      "genre": "Sci-Fi Horror",
+      "game_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltaDARmb4L8GDFrVjD6CLgebg9v13ybxhSw&s",
+      "youtube_video": "https://youtu.be/ILK89NaKuwg?si=thyzjq2JVRCJOvTe",
+      "video_description": "How Dead Space Perfects Cosmic Horror",
+      "ratings": [
+        {
+          "id": 21,
+          "rating_text": "Beggar Soldier - Dead Space (2023) is a phenomenal remake of the original Dead Space that came out in 2008. This remake is just a visual upgrade only, but it also reimagines the whole game to some extent. Briefly, the story begins with the USG Kellion and its crew members on their way just to do a routine repair mission on the USG Ishimura, but then it all goes wrong in the worst ways imaginable.",
+          "likes": 34,
+          "dislikes": 3
+        },
+        {
+          "id": 22,
+          "rating_text": "ziM - Highly recommended for survival horror fans. Aside from some stuttering caused by shader compiling on the fly, the game runs very smoothly and features incredible graphics. The gunplay is very well made and unique for each weapon. Experimenting with different weapons and special abilities is very enjoyable. Like sticking lasers with the linegun onto objects and move them with kinesis. Or gravity gun + pulsefire granate etc. You can get creative. :)",
+          "likes": 56,
+          "dislikes": 5
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "game_name": "The Legend of Zelda: Majora's Mask",
+      "release_date": "2000-04-27T16:30:25+00:00",
+      "genre": "Action-Adventure",
+      "game_image": "https://i.guim.co.uk/img/media/0199cf90c61afaf9536d98706d0c81425133f61b/0_1460_4863_2915/master/4863.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=278aa6d9f81d87478b4287dbbd3c485f",
+      "youtube_video": "https://youtu.be/1kEFiocPLkI?si=4D-kApZsp9mL7zbY",
+      "video_description": "Majora's Mask and the Art of Dark Symbolism",
+      "ratings": [
+        {
+          "id": 19,
+          "rating_text": "Mammoth_Mail_1666 - Finished The Legend of Zelda - Majora's Mask\r\n\r\nAfter Ocarina of time I tried my hardest to play this but because of the 3 day cycle and the overall anxiety inducing music, art and overall game design I used to drop it after a while.\r\n\r\nThis time I told myself I'll finish the damn thing. And now I've finally finished it. I can now say that my anxiety was well placed but I should've overcome it sooner. This game is amazing man, an absolute joy to play. The overall premise of the transformation masks are so damn fun. I think this game is the whole reason Twilight Princess has a transformation too. I loved being able to play as different races in zelda.\r\n\r\nAnother thing I loved are the dungeons. There are only 4 dungeons in this game but they're all intricately designed and so fun to play (except that 1 part in stone tower temple) that I don't mind their number being so low.\r\n\r\nTo accomodate for that they made the side quests. So many side quests my god it was a nightmare to go through some of them. But I still went through them because the world building is the best in all of Zelda. Since it's the same as Ocarina. But unlike Ocarina, this game makes you love the characters that inhabit the world. Clock Town is seriously the best town in all of Zelda. (Granted I've only played 3 Zelda games)\r\n\r\nYou get attached to the people in Clock Town so much that the side quests never feel like a chore. I want to help them. I want to make them happy. And not just because of the rewards. Truly makes you feel like the hero that Link is.",
+          "likes": 107,
+          "dislikes": 12
+        },
+        {
+          "id": 20,
+          "rating_text": "The three-day cycle is brilliant and intense.",
+          "likes": 234,
+          "dislikes": 18
+        }
+      ]
+    }
+  ]
+}

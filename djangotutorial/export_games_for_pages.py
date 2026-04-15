@@ -40,10 +40,16 @@ def serialize_games():
 
 def main():
     data = serialize_games()
-    output_path = Path(__file__).resolve().parent.parent / "docs" / "data" / "games.json"
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
-    print(f"Exported {len(data['games'])} games to {output_path}")
+    project_root = Path(__file__).resolve().parent.parent
+    output_paths = [
+        project_root / "docs" / "data" / "games.json",
+        project_root / "data" / "games.json",
+    ]
+
+    for output_path in output_paths:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        print(f"Exported {len(data['games'])} games to {output_path}")
 
 
 if __name__ == "__main__":
