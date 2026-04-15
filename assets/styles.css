@@ -82,7 +82,7 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-family: "Lacquer", cursive;
+  font-family: "Creepster", "Lacquer", cursive;
   color: var(--title);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: clamp(2.2rem, 7vw, 3.5rem);
