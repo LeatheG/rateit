@@ -1,14 +1,15 @@
 :root {
-  --bg: #0f1114;
-  --panel: rgba(19, 23, 29, 0.78);
-  --panel-border: rgba(255, 255, 255, 0.12);
-  --text: #eef2f7;
-  --muted: #a4afbd;
-  --accent: #ff4d21;
-  --accent-2: #ffd166;
-  --good: #2fd47b;
-  --bad: #ff5b6e;
-  --shadow: 0 22px 45px rgba(0, 0, 0, 0.28);
+  --bg: #0a0a0a;
+  --panel: rgba(255, 255, 255, 0.1);
+  --panel-border: rgba(255, 255, 255, 0.2);
+  --text: #ffffff;
+  --muted: #aaaaaa;
+  --title: #818181;
+  --link: #a20808;
+  --link-hover: #ff0000;
+  --good: #00ff88;
+  --bad: #ff4444;
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 * {
@@ -18,29 +19,22 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 18% 20%, #293241 0%, #1a1f25 32%, #0f1114 100%);
+  background-color: var(--bg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
   overflow-x: hidden;
+  padding: 40px;
 }
 
 .bg-grid {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 34px 34px;
-  z-index: -3;
+  display: none;
 }
 
 .bg-glow {
-  position: fixed;
-  z-index: -2;
-  border-radius: 999px;
-  filter: blur(50px);
-  opacity: 0.55;
-  animation: pulse 7s ease-in-out infinite;
+  display: none;
 }
 
 .bg-glow-one {
@@ -71,48 +65,48 @@ body {
 }
 
 .app-shell {
-  width: min(1040px, 92vw);
+  width: min(1040px, 100%);
   margin: 0 auto;
-  padding: 30px 0 50px;
+  padding: 0 0 50px;
 }
 
 .hero {
-  margin-bottom: 22px;
-  animation: slide-in 0.6s ease-out;
+  margin-bottom: 40px;
 }
 
 .eyebrow {
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-  font-weight: 700;
-  margin-bottom: 8px;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
   margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 0.03em;
-  font-size: clamp(3.2rem, 10vw, 6.4rem);
-  line-height: 0.92;
-  text-shadow: 0 9px 20px rgba(0, 0, 0, 0.35);
+  font-family: "Lacquer", cursive;
+  color: var(--title);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  line-height: 1.1;
+  text-align: center;
 }
 
 .hero-copy {
-  max-width: 700px;
+  max-width: 760px;
   color: var(--muted);
   margin-top: 10px;
-  font-size: 1.05rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .panel {
   border: 1px solid var(--panel-border);
   background: var(--panel);
-  border-radius: 18px;
-  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   padding: 22px;
-  animation: slide-in 0.55s ease-out;
 }
 
 .hidden {
@@ -128,35 +122,39 @@ body {
 .game-card {
   display: grid;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   padding: 14px;
   transform: translateY(0);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .game-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 .cover {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .game-title {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  color: var(--link);
 }
 
 .game-meta {
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .btn {
@@ -175,13 +173,13 @@ body {
 }
 
 .btn-primary {
-  color: #101318;
-  background: linear-gradient(130deg, #ffd166, #ff8f4f);
+  color: white;
+  background: var(--link);
 }
 
 .btn-back {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.12);
+  background: #000000;
 }
 
 .detail-header {
@@ -197,6 +195,7 @@ body {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .review-list {
@@ -205,10 +204,10 @@ body {
 }
 
 .review-item {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
 }
 
 .review-text {
@@ -222,8 +221,8 @@ body {
 
 .vote-btn {
   border: none;
-  border-radius: 9px;
-  padding: 8px 11px;
+  border-radius: 5px;
+  padding: 8px 15px;
   color: #0f1114;
   font-weight: 700;
   cursor: pointer;
@@ -240,8 +239,13 @@ body {
 .video-link {
   display: inline-block;
   margin-top: 8px;
-  color: var(--accent-2);
+  color: var(--link);
   font-weight: 700;
+}
+
+.video-link:hover,
+.game-title:hover {
+  color: var(--link-hover);
 }
 
 .empty {
@@ -262,11 +266,15 @@ body {
 @media (max-width: 760px) {
   .app-shell {
     width: min(1040px, 95vw);
-    padding-top: 20px;
+    padding-top: 0;
   }
 
   .panel {
     padding: 16px;
+  }
+
+  body {
+    padding: 20px;
   }
 
   .detail-header {
