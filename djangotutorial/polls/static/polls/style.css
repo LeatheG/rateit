@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    background-image: 
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    color: #fff;
+    padding: 40px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Lacquer', cursive;
+    color: #818181;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+li a {
+    color: #a20808;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.genre {
+    color: #aaa;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.game-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+legend {
+    color: #000000;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #30343b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #585858;
+}

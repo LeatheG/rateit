@@ -1,0 +1,119 @@
+{
+  "games": [
+    {
+      "id": 7,
+      "game_name": "SILENT HILL f",
+      "release_date": "2026-03-18T17:30:25.213510+00:00",
+      "genre": "Survival Horror",
+      "game_image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Silent_Hill_f_logo.png/640px-Silent_Hill_f_logo.png",
+      "youtube_video": "https://www.youtube.com/watch?v=Q8R4f8YE8zE",
+      "video_description": "Reveal trailer for SILENT HILL f.",
+      "ratings": [
+        {
+          "id": 13,
+          "rating_text": "Atmosphere looks deeply unsettling in the best way.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "id": 14,
+          "rating_text": "Visual style is gorgeous and terrifying.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "game_name": "Mouthwashing",
+      "release_date": "2026-02-18T17:30:25.213510+00:00",
+      "genre": "Psychological Horror",
+      "game_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2475490/header.jpg",
+      "youtube_video": "https://www.youtube.com/watch?v=Ue7l4M8fWj8",
+      "video_description": "Trailer and gameplay previews for Mouthwashing.",
+      "ratings": [
+        {
+          "id": 15,
+          "rating_text": "Disturbing narrative with a really unique tone.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "id": 16,
+          "rating_text": "Creative horror direction and strong writing.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "game_name": "Amnesia: The Bunker",
+      "release_date": "2026-01-21T17:30:25.213510+00:00",
+      "genre": "Survival Horror",
+      "game_image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Amnesia_The_Bunker_cover_art.jpg/640px-Amnesia_The_Bunker_cover_art.jpg",
+      "youtube_video": "https://www.youtube.com/watch?v=4lQj3M4jv0Q",
+      "video_description": "Official trailer for Amnesia: The Bunker.",
+      "ratings": [
+        {
+          "id": 17,
+          "rating_text": "Tension is nonstop from start to finish.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "id": 18,
+          "rating_text": "Sound design alone makes this terrifying.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "game_name": "The Legend of Zelda: Majora's Mask",
+      "release_date": "2025-12-24T17:30:25.213510+00:00",
+      "genre": "Action-Adventure",
+      "game_image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/The_Legend_of_Zelda_Majora%27s_Mask_box.jpg/640px-The_Legend_of_Zelda_Majora%27s_Mask_box.jpg",
+      "youtube_video": "https://www.youtube.com/watch?v=R3M6A9f7U2Q",
+      "video_description": "Classic trailer footage and retrospective clips.",
+      "ratings": [
+        {
+          "id": 19,
+          "rating_text": "One of the most haunting and memorable Zelda games.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "id": 20,
+          "rating_text": "The three-day cycle is brilliant and intense.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "game_name": "Dead Space",
+      "release_date": "2025-11-26T17:30:25.213510+00:00",
+      "genre": "Sci-Fi Horror",
+      "game_image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Dead_Space_2023_cover.jpg/640px-Dead_Space_2023_cover.jpg",
+      "youtube_video": "https://www.youtube.com/watch?v=cTDJNZ9cK1w",
+      "video_description": "Launch trailer for Dead Space.",
+      "ratings": [
+        {
+          "id": 21,
+          "rating_text": "Immersive worldbuilding and brutal combat.",
+          "likes": 0,
+          "dislikes": 0
+        },
+        {
+          "id": 22,
+          "rating_text": "Still one of the best horror experiences in space.",
+          "likes": 0,
+          "dislikes": 0
+        }
+      ]
+    }
+  ]
+}

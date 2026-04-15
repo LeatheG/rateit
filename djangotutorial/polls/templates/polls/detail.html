@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ game.game_name }} - Reviews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            background-image: 
+                linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            color: #fff;
+            padding: 40px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        h1 {
+            font-family: 'Lacquer', cursive;
+            color: #818181;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #818181;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .rating-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.3s ease;
+        }
+        .rating-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        .like-dislike-buttons {
+            margin-top: 10px;
+        }
+        .like-btn, .dislike-btn {
+            padding: 8px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+        .like-btn {
+            background-color: #00ff88;
+            color: #0a0a0a;
+            font-weight: bold;
+        }
+        .like-btn:hover {
+            background-color: #00cc6a;
+            transform: scale(1.05);
+        }
+        .dislike-btn {
+            background-color: #ff4444;
+            color: white;
+            font-weight: bold;
+        }
+        .dislike-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+        .game-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .game-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-right: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .voted {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        a {
+            color: #a20808;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+        .video-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .video-section h3 {
+            color: #818181;
+            margin-top: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="game-header">
+        {% if game.game_image %}
+        <img src="{{ game.game_image }}" alt="{{ game.game_name }}" class="game-image" onerror="this.onerror=null;this.src='https://placehold.co/640x360/111111/f5f5f5?text=Image+Unavailable';">
+        {% endif %}
+        <div>
+            <h1>{{ game.game_name }}</h1>
+            <p><strong>Genre:</strong> {{ game.genre }} | <strong>Release Date:</strong> {{ game.release_date|date:"F Y" }}</p>
+        </div>
+    </div>
+
+    <h2>Reviews</h2>
+    {% if game.rating_set.all %}
+        {% for rating in game.rating_set.all %}
+        <div class="rating-item" id="rating-{{ rating.id }}">
+            <p>{{ rating.rating_text }}</p>
+            <div class="like-dislike-buttons">
+                <button class="like-btn" data-rating-id="{{ rating.id }}" data-vote-type="like">
+                     ❤ (<span class="like-count">{{ rating.likes }}</span>)
+                </button>
+                <button class="dislike-btn" data-rating-id="{{ rating.id }}" data-vote-type="dislike">
+                    ✖ (<span class="dislike-count">{{ rating.dislikes }}</span>)
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No reviews yet for this game.</p>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'polls:index' %}">← Back to all games</a>
+
+    {% if game.youtube_video %}
+    <div class="video-section">
+        <h3>Recommended Video</h3>
+        {% if game.video_description %}
+        <p style="margin-top: 10px; margin-bottom: 15px; font-size: 1em;">
+            {{ game.video_description }}
+        </p>
+        {% endif %}
+        <p style="margin-top: 10px;">
+            <a href="{{ game.youtube_video }}" target="_blank" style="font-size: 1.1em;">
+                ▶ Watch 
+            </a>
+        </p>
+    </div>
+    {% endif %}
+    </div>
+
+    <script>
+        // Check localStorage for previous votes
+        function checkVotedStatus() {
+            document.querySelectorAll('.rating-item').forEach(item => {
+                const ratingId = item.id.replace('rating-', '');
+                const voted = localStorage.getItem('voted_' + ratingId);
+                if (voted) {
+                    const buttons = item.querySelectorAll('.like-btn, .dislike-btn');
+                    buttons.forEach(btn => btn.classList.add('voted'));
+                }
+            });
+        }
+
+        function vote(ratingId, voteType) {
+            if (localStorage.getItem('voted_' + ratingId)) {
+                alert('You have already voted on this review!');
+                return;
+            }
+
+            const url = voteType === 'like' ? 
+                `/polls/rating/${ratingId}/like/` : 
+                `/polls/rating/${ratingId}/dislike/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const ratingDiv = document.getElementById('rating-' + ratingId);
+                        const countSpan = ratingDiv.querySelector(`.${voteType}-count`);
+                        countSpan.textContent = data.count;
+
+                        localStorage.setItem('voted_' + ratingId, voteType);
+                        const buttons = ratingDiv.querySelectorAll('.like-btn, .dislike-btn');
+                        buttons.forEach(btn => btn.classList.add('voted'));
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Add event listeners to all vote buttons
+        document.querySelectorAll('.like-btn, .dislike-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const ratingId = this.getAttribute('data-rating-id');
+                const voteType = this.getAttribute('data-vote-type');
+                vote(ratingId, voteType);
+            });
+        });
+
+        checkVotedStatus();
+    </script>
+  </body>
+</html>
