@@ -42,9 +42,7 @@ function renderList() {
 
   if (!games.length) {
     listView.innerHTML = `
-      <h2>Games</h2>
-      <p class="empty">No games found in data/games.json yet.</p>
-      <p class="empty">Add data there, then commit and push to update GitHub Pages.</p>
+      <p class="empty">No games are available to rate.</p>
     `;
     return;
   }
@@ -52,27 +50,22 @@ function renderList() {
   const cards = games
     .map(
       (game) => `
-      <article class="game-card">
+      <li class="game-card">
         ${
           game.game_image
             ? `<img class="cover" src="${game.game_image}" alt="${game.game_name}" onerror="this.onerror=null;this.src='${fallbackImage}';" />`
             : `<div class="cover"></div>`
         }
-        <h3 class="game-title">${game.game_name}</h3>
-        <p class="game-meta">${game.genre} | ${formatReleaseDate(game.release_date)}</p>
-        <button class="btn btn-primary" data-open="${game.id}">Open Reviews</button>
-      </article>
+        <div>
+          <a class="game-link" href="#game-${game.id}">${game.game_name}</a>
+          <span class="genre">(${game.genre})</span>
+        </div>
+      </li>
     `
     )
     .join("");
 
-  listView.innerHTML = `<h2>Games</h2><div class="game-grid">${cards}</div>`;
-
-  listView.querySelectorAll("[data-open]").forEach((button) => {
-    button.addEventListener("click", () => {
-      location.hash = `game-${button.getAttribute("data-open")}`;
-    });
-  });
+  listView.innerHTML = `<ul class="game-list">${cards}</ul>`;
 }
 
 function renderDetail(gameId) {
@@ -90,15 +83,19 @@ function renderDetail(gameId) {
         .map((rating) => {
           const counts = mergedRatingCounts(game.id, rating);
           return `
-            <article class="review-item" data-review="${game.id}:${rating.id}">
+            <article class="review-item rating-item" data-review="${game.id}:${rating.id}" id="rating-${rating.id}">
               <p class="review-text">${rating.rating_text}</p>
-              <div class="vote-row">
+              <div class="vote-row like-dislike-buttons">
                 <button class="vote-btn vote-like" data-vote="like" data-game="${game.id}" data-rating="${rating.id}" ${
             counts.voted ? "disabled" : ""
-          }>Like (${counts.likes})</button>
+          }>
+                  ❤ (<span class="like-count">${counts.likes}</span>)
+                </button>
                 <button class="vote-btn vote-dislike" data-vote="dislike" data-game="${game.id}" data-rating="${rating.id}" ${
             counts.voted ? "disabled" : ""
-          }>Dislike (${counts.dislikes})</button>
+          }>
+                  ✖ (<span class="dislike-count">${counts.dislikes}</span>)
+                </button>
               </div>
             </article>
           `;
@@ -107,31 +104,33 @@ function renderDetail(gameId) {
     : `<p class="empty">No reviews yet for this game.</p>`;
 
   detailView.innerHTML = `
-    <button class="btn btn-back" id="back-btn">Back to all games</button>
     <div class="detail-header">
       ${
         game.game_image
-          ? `<img class="detail-cover" src="${game.game_image}" alt="${game.game_name}" onerror="this.onerror=null;this.src='${fallbackImage}';" />`
+          ? `<img class="detail-cover game-image" src="${game.game_image}" alt="${game.game_name}" onerror="this.onerror=null;this.src='${fallbackImage}';" />`
           : `<div class="detail-cover"></div>`
       }
       <div>
-        <h2>${game.game_name}</h2>
-        <p class="game-meta">${game.genre} | ${formatReleaseDate(game.release_date)}</p>
-        ${
-          game.youtube_video
-            ? `<a class="video-link" href="${game.youtube_video}" target="_blank" rel="noopener noreferrer">Watch Recommended Video</a>`
-            : ""
-        }
-        ${game.video_description ? `<p>${game.video_description}</p>` : ""}
+        <h1>${game.game_name}</h1>
+        <p><strong>Genre:</strong> ${game.genre} | <strong>Release Date:</strong> ${formatReleaseDate(game.release_date)}</p>
       </div>
     </div>
-    <h3>Reviews</h3>
+    <h2>Reviews</h2>
     <div class="review-list">${ratingsHtml}</div>
+    <br>
+    <a class="back-link" href="#">← Back to all games</a>
+    ${
+      game.youtube_video
+        ? `
+          <div class="video-section">
+            <h3>Recommended Video</h3>
+            ${game.video_description ? `<p>${game.video_description}</p>` : ""}
+            <p><a class="video-link" href="${game.youtube_video}" target="_blank" rel="noopener noreferrer">▶ Watch</a></p>
+          </div>
+        `
+        : ""
+    }
   `;
-
-  document.getElementById("back-btn").addEventListener("click", () => {
-    location.hash = "";
-  });
 
   detailView.querySelectorAll("[data-vote]").forEach((button) => {
     button.addEventListener("click", handleVote);
